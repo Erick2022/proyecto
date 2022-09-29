@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="EEO">
+    <title>Registro de Actas</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <header class="title">
+        <h1> Ingreso de Registros</h1>
+    </header>>
+
+    <div class="container" id="selects">
+        <div class="selecciones">
+            <button class="botones" id="DatosD" type="button" name="datosdiurno" value=""> Datos Diurno</button>
+
+            <button class="botones" id="DatosN" type="button" name="datosdiurno" value=""> Datos Nocturno</button>
+        </div>
+        <div class="selecciones">
+            <label for="hdiurno">Horario Diurno:</label>
+            <select required id="hdiurno" class="horarios" disabled="true" onclick="habilitar()" onchange=selectHD();>
+                <option value="">Seleccione diurno</option>
+                <option value="hd">08:00 - 09:00</option>
+                <option value="hd">09:00 - 10:00</option>
+                <option value="hd">10:00 - 11:00</option>
+                <option value="hd">11:00 - 12:00</option>
+                <option value="hd">12:00 - 13:00</option>
+                <option value="hd">13:00 - 14:00</option>
+                <option value="hd">14:00 - 15:00</option>
+                <option value="hd">15:00 - 16:00</option>
+                <option value="hd">16:00 - 17:00</option>
+                <option value="hd">17:00 - 18:00</option>
+                <option value="hd">18:00 - 19:00</option>
+                <option value="hd">19:00 - 20:00</option>
+            </select>
+
+        </div>
+
+        <div class="selecciones">
+            <label for="hnocturno">Horario Nocturno:</label>
+            <select required id="hnocturno" class="horarios" disabled="true" onclick="habilitar()" onchange="selectHD();">
+                <option value="">Seleccione nocturno</option>
+                <option value="hd">20:00 - 21:00</option>
+                <option value="hd">21:00 - 22:00</option>
+                <option value="hd">22:00 - 23:00</option>
+                <option value="hd">23:00 - 24:00</option>
+                <option value="hd">00:00 - 01:00</option>
+                <option value="hd">01:00 - 02:00</option>
+                <option value="hd">02:00 - 03:00</option>
+                <option value="hd">03:00 - 04:00</option>
+                <option value="hd">04:00 - 05:00</option>
+                <option value="hd">05:00 - 06:00</option>
+                <option value="hd">06:00 - 07:00</option>
+                <option value="hd">07:00 - 08:00</option>
+
+            </select>
+        </div>
+    </div>
+    <div class="InspectorInfraccion">
+            <div class="Inspector">
+                <label for="Inspector">Inspector</label>
+                <select required id="Inspector" disabled="true"onclick="habilitar()" onchange="selectHD();">
+                    <option value="">Seleccione Inspector</option>
+                    <option value="">Leslie Dios</option>
+                    <option value="">Jose Aquino</option>
+                    <option value="">Carlos Espinoza</option>
+                </select>
+            <div class="infracc">
+                <button class="infracc" id="DatosInfracc" type="button" name="datosdiurno" value="">INFRACCIONES
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <form id="TypeServices" class="Typeservice">
+
+        <div class="Services" id="services">
+            <label for="mpel">Matpel 621</label>
+            <label for="TTM">TTM NAcional 611</label>
+            <label for="TTP">TTP Turistico</label>
+            <label for="TTPn">TTP Nacional REG 601</label>
+            <label for="TTtra">TT Trabajadores 601</label>
+            <label for="ttmin">TTM Internacional</label>
+            <label for="ttpin">TTP Internacinal</label>
+            <label for="TPpas">T Privado Pasajeros 601</label>
+            <label for="TTPOt">TTP Otros 501</label>
+        </div>
+        <div class="input1" id="Registros">
+            <input id="mpel" type="number" name="mpel" value="0" min="0" max="20">
+            <input id="ttm" type="number" name="TTM" value="0" min="0" max="20">
+            <input id="TTP" type="number" name="TTP" value="0" min="0" max="20">
+            <input id="TTPn" type="number" name="TTPn" value="0" min="0" max="20">
+            <input id="TTtra" type="number" name="TTtra" value="0" min="0" max="20">
+            <input id="ttmin" type="number" name="ttmin" value="0" min="0" max="20">
+            <input id="ttpin" type="number" name="ttpin" value="0" min="0" max="20">
+            <input id="TTPas" type="number" name="TTPas" value="0" min="0" max="20">
+            <input id="TTPOt" type="number" name="TTPOt" value="0" min="0" max="20">
+        </div>
+
+        <div class="flechas" id="flechas">
+            <p>==========================> </p>
+            <p>==========================> </p>
+            <p>==========================> </p>
+            <p>==========================> </p>
+            <p>==========================> </p>
+            <p>==========================> </p>
+            <p>==========================> </p>
+            <p>==========================> </p>
+            <p>==========================> </p>
+        </div>
+        <div class="input2" id="contarInfracciones">
+            <input id="mpel" type="number" name="mpel" value="0" min="0" max="20" disabled="true">
+            <input id="ttm" type="number" name="TTM" value="0" min="0" max="20" disabled="true">
+            <input id="TTP" type="number" name="TTP" value="0" min="0" max="20" disabled="true">
+            <input id="TTPn" type="number" name="TTPn" value="0" min="0" max="20" disabled="true">
+            <input id="TTtra" type="number" name="TTtra" value="0" min="0" max="20" disabled="true">
+            <input id="ttmin" type="number" name="ttmin" value="0" min="0" max="20" disabled="true">
+            <input id="ttpin" type="number" name="ttpin" value="0" min="0" max="20" disabled="true">
+            <input id="TTPas" type="number" name="TTPas" value="0" min="0" max="20" disabled="true">
+            <input id="TTPOt" type="number" name="TTPOt" value="0" min="0" max="20" disabled="true">
+        </div>
+
+    </form>
+    <div class="botones">
+        <button id="btn" type="button" name="btn" onclick="SumarRegistros(Registros)">GUARDAR</button>
+        <button id="btn" type="button" name="btn" onclick="">LIMPIAR</button>
+    </div>
+</body>
+
+<footer class="footer">
+
+    <h4>
+        © EEO., Inc. y otros. Por favor envíe cualquier comentario o correcciones al equipo de produccion,
+        piuratumbes2018@gmail.com.
+        El Proyecto es mantenido por EEO compañia y dirigido por su representante y patrocinado por EEO Inc.
+        Este es un sitio mantenido por la comunidad. EEO Inc no es responsable de su contenido.
+        Todos los derechos reservados - 2022
+    </h4>
+
+
+</footer>
+<!-- <script>
+    function sumarRegistros(Registros) {
+        let suma = 0;
+        for (let i = 0; i < Registros.length; i++) {
+            suma += Registros[i];
+        }
+        return suma;
+    }
+</script> -->
+<script>
+        let btndiurno = document.getElementById("DatosD");
+        let btnocturno = document.getElementById('DatosN');
+   
+        btnocturno.addEventListener('click'), (e) => {
+            function deshabilitar() {
+            btnocturno.disabled = true;     
+         
+            }  
+        }
+     /* btnocturno.addEventListener("ciclk", habilitar); */
+
+
+ /*  unction habilitar() {
+            btndiurno.disabled = true;
+            hdiurno.disabled = false;
+            Inspector.disabled = true;            
+     } */
+           
+</script>
+</html>

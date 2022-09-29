@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@media screen and (max-width: 768px) {
+    .container .Datos {
+        grid-column: 1 / -1;
+    }
+    .selecciones  {
+        grid-column: 1 / -1;
+    }
+}
+
+body {
+    background: #130f40;
+}
+
+header {
+    margin: 0px auto;
+    padding: 30px;
+    text-align: center;
+    font-family: 'Vazirmatn', sans-serif;
+    font-size: 1em;
+    font-weight: 100;
+    background: #100366;
+    color: #dee0e6;
+}
+.container {
+    display: grid;
+    grid-template-columns: 550px 550px 550px;
+    grid-template-rows: 25px 25px 25px;r
+    height: 50px;
+    width: 98%;
+    max-width: 1650px;
+    background: #dee0e6;
+    border: 2px solid white;
+    margin: 0 auto;
+    grid-gap: 10px;
+    color: #100366;
+}
+.container .selecciones > select {
+    font-size: medium;
+}
+.InspectorInfraccion .Inspector > select {
+    font-size: medium;
+}
+.container > div {
+    display: block;
+    padding: 20px;
+    text-align: center;
+    justify-content: right;
+    margin-top: 5px;
+    font-family: 'Vazirmatn', sans-serif;
+    font-size: 2em; 
+}
+form {
+    width: 650px;
+    height: 650px;
+    padding: 20px;
+    justify-items: center;
+    margin: 20px auto;
+    background: #3742fa;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    font-family: 'Vazirmatn', sans-serif;
+    font-size: 1.1em;
+    color: #100366;
+    border-radius: 8px;
+}
+.Services {
+    display: inline-block;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #100366;
+}
+.input1 {
+    display: inline-block;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5px;
+}
+.input2 {
+    display: inline-block;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5px;
+}
+.flechas {
+    display: inline-block;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+.footer h4 {
+    margin: 0 0px;
+    height: 40px;
+    padding: 60px;
+    background: #100366;
+    color: black;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    font-family: 'Vazirmatn', sans-serif;
+    color: #dee0e6;
+    font-size: 15px;
+}
+input {
+    height: 60px;
+    width: 60px;
+    font-size: 50px;
+    font-size: bold;
+    font-family: 'Vazirmatn', sans-serif;
+    color: #100366;
+}
+.container .botones {
+    display: flex;
+    width: 180px;
+    height: 60px;
+    margin: 5x 5px;
+    padding: 5px 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Vazirmatn', sans-serif;
+    display: inline-block;
+    cursor: pointer;
+    font-size: bold;
+    font-size: 20px;
+    color: #dee0e6;
+    border: none;
+    background-color: #100366;
+   
+}
+.botones button {
+    width: 400x;
+    height: 70px;
+    position: absolute;
+    padding: 5px;
+    display: block;
+    display: inline-block;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row: 30px;
+    row-gap: 10px;
+    align-items: center;
+    margin: 0 auto;     
+    background: #3742fa;
+    font-family: 'Vazirmatn', sans-serif;
+    font-size: 1.5em;
+    color: #100366;
+}
+.InspectorInfraccion button  {
+    display: flex;
+    width: 180px;
+    height: 80px;
+    margin: 5x 5px;
+    margin-top: 70px;
+    padding: 5px 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Vazirmatn', sans-serif;
+    display: inline-block;
+    cursor: pointer;
+    font-size: bold;
+    font-size: 20px;
+    color: #dee0e6;
+    border: none;
+    background-color: #100366;
+    border: 1px solid #dee0e6;
+
+}
+.infrac {
+    display: flex;
+    width: 250px;
+    height: 80px;
+    font-family: 'Vazirmatn', sans-serif;
+    font-size: bold;
+    margin: 5x 5px;
+    display: grid;
+    padding: 15px 15px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 300px;
+    background: #dee0e6;
+    margin-top: 10px; 
+    background-color: #100366;
+    border: none;
+    color: #100366;
+} 
+
+.Inspector {
+    display: grid;
+    display: block;
+    row-gap: 20px;
+    font-family: 'Vazirmatn', sans-serif;
+    font-size: bold;
+    font-size: 20px;
+    background: #dee0e6;
+    margin-top: 50px;
+    margin-left: 270px;
+    padding: 10px;
+    height: 40px;
+    grid-template-rows: 25px 25px;
+    display: inline-block;
+    width: 98%;
+    max-width: 280px;
+
+}
